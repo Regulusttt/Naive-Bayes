@@ -21,7 +21,7 @@ new_input = inputs.drop(['Outlook', 'Temperature', 'Humidity', 'Wind'], axis = '
 
 Classifier = GaussianNB()
 Classifier.fit(new_input, result)
-print(Classifier.score(new_input, result))
+print(f"Nilai Akurasi = {Classifier.score(new_input, result)}\n")
 
 user_outlook = int(input("Masukan Outlook(Overcast=0/Rain=1/Sunny=2) = "))
 user_temperature = int(input("Masukan Temperature(Cool=0/Hot=1/Mild=2) = "))
